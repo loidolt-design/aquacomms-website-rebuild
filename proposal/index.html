@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rebuilding Website with Gatsby - Loidolt Design</title>
+
+    <!-- Material Design CSS -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Material Design JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <style>
+      /* Custom Styles */
+      body {
+        font-family: "Open Sans", sans-serif;
+        background-color: #02091b;
+        color: #cccccc;
+      }
+
+      #globe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 120%;
+        z-index: 0;
+        margin-top: 80px;
+      }
+
+      .banner {
+        position: relative;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to top, #02091b, #0a214b);
+        color: #000000;
+        padding: 10px;
+      }
+
+      .banner-content {
+        position: relative;
+        z-index: 1;
+        background: #fdfdfd;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        width: 50%;
+      }
+
+      @media (max-width: 800px) {
+        #globe {
+          width: 100%;
+          height: 50vh;
+        }
+
+        .banner-content {
+          width: 90%;
+        }
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        color: #c96f00;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      li {
+        margin: 10px;
+      }
+
+      .list-header {
+        font-size: 20px;
+      }
+
+      .material-icons {
+        vertical-align: middle;
+        margin-right: 10px;
+      }
+
+      .reasons-list {
+        margin-bottom: 40px;
+      }
+
+      .reasons-list li {
+        padding-bottom: 10px;
+      }
+
+      .transistion-section {
+        margin-top: 40px;
+      }
+
+      .pricing-section {
+        margin-top: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 2px;
+        padding-bottom: 30px;
+        background-color: #033346;
+        border-radius: 20px;
+      }
+
+      .chart-container {
+        margin-top: 40px;
+      }
+
+      .trust-section {
+        margin-top: 40px;
+      }
+
+      .analysis-section {
+        margin-top: 40px;
+      }
+
+      .call-to-action-section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        border-top: 1px solid #ccc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="banner">
+      <div class="banner-content">
+        <h1>Elevate Aqua Comms' Online Presence with Loidolt Design</h1>
+        <p>
+          Transform and modernize your WordPress website into a lightning-fast,
+          secure, and visually captivating online presence with the power of
+          Gatsby.
+        </p>
+      </div>
+      <div id="globe"></div>
+    </section>
+
+    <div class="container">
+      <h2>What's So Great About Gatsby?</h2>
+      <p>
+        Gatsby is a state-of-the-art website builder that combines speed,
+        security, and stunning design. With Gatsby, your website will load
+        instantly, impress visitors with its modern look, and keep you ahead of
+        the competition in the online world.
+      </p>
+
+      <ul class="reasons-list">
+        <li>
+          <i class="material-icons">check</i>
+          <b class="list-header">Lightning-Fast Performance:</b>
+          <p>
+            With a rebuilt Gatsby site powered by WordPress as a headless CMS,
+            your website will load in the blink of an eye. Say goodbye to
+            sluggish page speeds and hello to an exceptional user experience
+            that keeps visitors engaged and encourages them to explore more.
+          </p>
+        </li>
+        <li>
+          <i class="material-icons">check</i>
+          <b class="list-header">Enhanced Security:</b>
+          <p>
+            Your website's security is paramount. By leveraging Gatsby's static
+            site generation and decoupling the frontend from WordPress,
+            potential vulnerabilities associated with plugins or server-side
+            code execution are minimized. Enjoy peace of mind knowing that your
+            site and valuable data are protected.
+          </p>
+        </li>
+        <li>
+          <i class="material-icons">check</i>
+          <b class="list-header">Ready for Growth:</b>
+          <p>
+            As your business grows, your website needs to keep up. Gatsby's
+            scalability ensures your site can handle surges in traffic without
+            compromising performance. Whether it's a sudden influx of visitors
+            or future expansion plans, your Gatsby site will deliver a seamless
+            experience to every user.
+          </p>
+        </li>
+        <li>
+          <i class="material-icons">check</i>
+          <b class="list-header">Modern and Future-Proof:</b>
+          <p>
+            Embrace the power of modern web development with Gatsby. Its
+            cutting-edge technologies, like React and GraphQL, future-proof your
+            site, making it adaptable to emerging trends and advancements. Stay
+            ahead of the competition with a visually stunning and
+            technologically advanced website.
+          </p>
+        </li>
+        <li>
+          <i class="material-icons">check</i>
+          <b class="list-header">SEO Supercharged:</b>
+          <p>
+            Boost your search engine visibility and reach more customers.
+            Gatsby's optimized static site architecture, combined with WordPress
+            as a headless CMS, ensures your content is easily discoverable by
+            search engines. Watch your organic traffic soar as your website
+            climbs the search rankings.
+          </p>
+        </li>
+        <li>
+          <i class="material-icons">check</i>
+          <b class="list-header">Effortless Content Management:</b>
+          <p>
+            Seamlessly manage your website content using WordPress, the trusted
+            and user-friendly CMS you're already familiar with. Update, publish,
+            and organize your content in a breeze, while Gatsby's frontend
+            dynamically pulls the latest content from WordPress, ensuring a
+            synchronized and hassle-free workflow.
+          </p>
+        </li>
+        <li>
+          <i class="material-icons">check</i>
+          <b class="list-header">Engage and Convert:</b>
+          <p>
+            Capture your audience's attention with an immersive user experience.
+            Gatsby's advanced features and sleek designs create visually
+            captivating websites that leave a lasting impression. Engage
+            visitors, nurture leads, and drive conversions with a website that
+            sets you apart from the competition.
+          </p>
+        </li>
+      </ul>
+
+      <section class="transition-section">
+        <h2>Utilize Aqua Comms' Existing WordPress CMS</h2>
+        <p>
+          Aqua Comms can leverage the investment in its existing WordPress
+          installation by transforming it into a powerful headless CMS. Gatsby
+          can fetch content from WordPress via the inbuilt REST API or an
+          offically supported GraphQL API, allowing Aqua Comms to manage and
+          update website content seamlessly.
+        </p>
+        <p>
+          This is a popular solution that retains the ease of use that WordPress
+          provides to media and content management teams while providing the
+          performance, flexiblity, and scalability of a static site generator.
+        </p>
+      </section>
+
+      <section class="analysis-section">
+        <h2>Why Rebuilding The Current Website is Necessary</h2>
+        <p>
+          It's important to understand why Aqua Comms' current website may be
+          outdated and why a rebuild is necessary to ensure the company stays
+          ahead in the telecommunications industry. Here are a few key reasons:
+        </p>
+        <ul>
+          <li>
+            <i class="material-icons">face</i>
+            <b class="list-header">Enhanced User Experience:</b>
+            <p>
+              Outdated websites lead to a poor user experience, reducing
+              engagement and sales. By updating the design, we create a seamless
+              and user-friendly experience that increases customer satisfaction
+              and conversions.
+            </p>
+          </li>
+          <li>
+            <i class="material-icons">build</i>
+            <b class="list-header">Reflecting Brand Identity:</b>
+            <p>
+              Websites represent a company's brand. Outdated design elements and
+              inconsistencies erode credibility and trust. Redesigning ensures a
+              consistent and modern brand image that attracts customers and
+              establishes a strong presence.
+            </p>
+          </li>
+          <li>
+            <i class="material-icons">phone_iphone</i>
+            <b class="list-header">Mobile Responsiveness:</b>
+            <p>
+              With mobile devices being prevalent, a mobile-responsive website
+              is crucial. Outdated designs alienate a significant portion of the
+              audience. Revamping the design with mobile-first approach provides
+              a captivating experience across all devices, maximizing engagement
+              and conversions.
+            </p>
+          </li>
+          <li>
+            <i class="material-icons">query_stats</i>
+            <b class="list-header">Improved Search Visibility:</b>
+            <p>
+              Outdated designs hinder search engine rankings, reducing organic
+              traffic and growth opportunities. Modern designs that are
+              optimized for search engines improve visibility, attract more
+              organic traffic, and drive business growth.
+            </p>
+          </li>
+          <li>
+            <i class="material-icons">campaign</i>
+            <b class="list-header">Attracting Top Talent:</b>
+            <p>
+              Outdated websites discourage top talent from applying.
+              Revitalizing the design creates an engaging and user-friendly
+              experience that showcases the company's culture, values, and
+              career opportunities, attracting and retaining the best
+              candidates.
+            </p>
+          </li>
+        </ul>
+        <p>
+          By rebuilding Aqua Comms' website with Gatsby, the company can address
+          these issues and leverage modern technologies to deliver a visually
+          stunning, highly functional, and secure website that positions Aqua
+          Comms as a leading player in the telecommunications industry.
+        </p>
+      </section>
+
+      <section class="pricing-section">
+        <h2>Estimated Scope of Work</h2>
+        <ul>
+          <li>
+            - Rebuild 20-25 static pages with intricate visuals and layouts,
+            tailored to Aqua Comms' brand.
+          </li>
+          <li>
+            - Integrate news, events, and press release blogs to keep Aqua
+            Comms' audience informed.
+          </li>
+          <li>
+            - Utilize 3D visuals and animated graphics to showcase Aqua Comms'
+            network.
+          </li>
+          <li>
+            - Implement an AI chatbot for enhanced user interaction and support
+            on Aqua Comms' website.
+          </li>
+          <li>
+            - Design a modern and responsive user interface following Material
+            Design guidelines to reflect Aqua Comms' professionalism.
+          </li>
+          <li>
+            - Set up Gatsby as the static site generator and connect it to Aqua
+            Comms' WordPress CMS for easy content management.
+          </li>
+          <li>
+            - Create static site templates for Aqua Comms' existing WordPress
+            pages, enabling automatic page generation on the new Gatsby site.
+          </li>
+          <li>
+            - Implement advanced SEO techniques and AI-driven content update
+            recommendations to enhance Aqua Comms' search engine visibility in
+            the telecommunications industry.
+          </li>
+          <li>
+            - Test and optimize the website for optimal performance, ensuring a
+            seamless experience for Aqua Comms' visitors.
+          </li>
+          <li>
+            - Establish continuous deployment pipelines for smooth updates and
+            future maintenance.
+          </li>
+          <li>
+            - Deploy the Gatsby website to a reliable hosting environment,
+            ensuring global availability and fast loading times.
+          </li>
+        </ul>
+
+        <h2>Price Estimate</h2>
+        <p>
+          Based on the outlined scope of work, the estimated cost for the
+          website rebuild would range between $40,000 and $70,000. Please note
+          that this is an approximate price estimate, and the final quote will
+          be tailored to Aqua Comms' specific requirements and objectives.
+        </p>
+        <p>
+          Alternatively, I can offer an hourly basis for this project. Many
+          businesses I work with prefer this approach as it allows for more
+          flexibility in adding new features and requests without requiring a
+          full revised estimate in case of scope changes. In this scenario, I
+          would provide a weekly commitment of hours for your rebuild and bill
+          at a rate of $100 per hour for programming work.
+        </p>
+        <div class="chart-container">
+          <canvas id="pricing-chart"></canvas>
+        </div>
+      </section>
+
+      <section class="trust-section">
+        <h2>Why Rebuild With Loidolt Design?</h2>
+        <p>
+          As an experienced web design independent contractor, I have
+          successfully delivered numerous projects, showcasing my adaptability
+          and expertise in managing complex data structures. Here's why Aqua
+          Comms can trust me with its website rebuild:
+        </p>
+        <ul>
+          <li>
+            <i class="material-icons">check</i>
+            Proven track record of designing and developing successful websites
+            for various industries, demonstrating adaptability to different
+            business needs
+          </li>
+          <li>
+            <i class="material-icons">check</i>
+            Deep understanding of managing complex data structures, ensuring
+            Aqua Comms' website can handle and present information effectively
+          </li>
+          <li>
+            <i class="material-icons">check</i>
+            Expertise in technologies like Gatsby, WordPress, and React,
+            enabling the creation of a flexible and scalable solution for Aqua
+            Comms
+          </li>
+          <li>
+            <i class="material-icons">check</i>
+            Effective utilization of AI tools like ChatGPT, which generated the
+            majority of this proposal including the animated banner section.
+          </li>
+          <li>
+            <i class="material-icons">check</i>
+            Commitment to delivering exceptional results that align with Aqua
+            Comms' brand and business goals
+          </li>
+          <li>
+            <i class="material-icons">check</i>
+            A collaborative approach, working closely with Aqua Comms to ensure
+            its vision is brought to life
+          </li>
+          <li>
+            <i class="material-icons">check</i>
+            Extensive experience in digital automation and optimization,
+            preventing wasted time and resources and ensuring efficient long
+            term maintenance
+          </li>
+          <li>
+            <i class="material-icons">check</i>
+            Positive client testimonials and referrals, demonstrating my ability
+            to adapt to different project requirements and deliver successful
+            outcomes
+          </li>
+        </ul>
+        <p>
+          I am confident that I can meet and exceed Aqua Comms' expectations in
+          rebuilding its corporate website. Let's work together to create a
+          stunning online presence that showcases Aqua Comms' adaptability and
+          effectively manages complex data structures with the support of
+          cutting-edge AI tools like ChatGPT.
+        </p>
+      </section>
+
+      <section class="call-to-action-section">
+        <h2>Ready to Elevate Aqua Comms' Online Presence?</h2>
+        <p>
+          If you're eager to see Aqua Comms' website transformed with a
+          cutting-edge Gatsby rebuild and propel your online presence to new
+          heights, let's make it happen. I'm confident that our expertise and
+          innovative approach can deliver outstanding results for Aqua Comms.
+        </p>
+        <p>
+          Email:
+          <a href="mailto:loidolt@gmail.com" target="_blank" rel="noreferrer"
+            >loidolt@gmail.com</a
+          >
+        </p>
+        <p>
+          For more information about our company and to see examples of our
+          previous successful projects, please visit our website at
+          <a href="https://loidolt.design" target="_blank" rel="noreferrer">
+            loidolt.design</a
+          >.
+        </p>
+      </section>
+    </div>
+
+    <!-- Globe -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script>
+      var globeElement = document.getElementById("globe");
+      var scene = new THREE.Scene();
+      var camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+      );
+      var renderer = new THREE.WebGLRenderer({ alpha: true }); // Set background to be transparent
+      renderer.setSize(
+        document.getElementById("globe").clientWidth,
+        document.getElementById("globe").clientHeight
+      );
+      document.getElementById("globe").appendChild(renderer.domElement);
+
+      var globeRadius = 1.5;
+      var geometry = new THREE.SphereGeometry(globeRadius, 16, 16);
+      var material = new THREE.MeshBasicMaterial({
+        color: 0x234487,
+        wireframe: true,
+      });
+      var globe = new THREE.Mesh(geometry, material);
+      scene.add(globe);
+
+      var linesMaterial = new THREE.LineBasicMaterial({ color: 0x03a0c5 });
+
+      var start = new THREE.Vector3(
+        globeRadius * (2 * Math.random() - 1),
+        globeRadius * (2 * Math.random() - 1),
+        globeRadius * (2 * Math.random() - 1)
+      );
+      start.normalize().multiplyScalar(globeRadius);
+
+      for (var i = 0; i < 10; i++) {
+        var end = new THREE.Vector3(
+          globeRadius * (2 * Math.random() - 1),
+          globeRadius * (2 * Math.random() - 1),
+          globeRadius * (2 * Math.random() - 1)
+        );
+        end.normalize().multiplyScalar(globeRadius);
+
+        var angle = start.angleTo(end) / Math.PI;
+        var midLength = globeRadius * (1 + angle);
+
+        var midPoint = start.clone().lerp(end, 0.5);
+        midPoint.normalize();
+        midPoint.multiplyScalar(midLength);
+
+        var curve = new THREE.QuadraticBezierCurve3(
+          start.clone(),
+          midPoint,
+          end.clone()
+        );
+
+        var points = curve.getPoints(50);
+        var linesGeometry = new THREE.BufferGeometry().setFromPoints(points);
+        var line = new THREE.Line(linesGeometry, linesMaterial);
+        globe.add(line);
+
+        start = end; // Set the start point of the next line to the end point of this line
+      }
+
+      // This will move the camera back a bit, so the globe appears smaller
+      camera.position.z = 3;
+
+      // This will offset the camera position along X-axis to move the globe partially off screen
+      camera.position.x = -1;
+
+      camera.aspect = globeElement.offsetWidth / globeElement.offsetHeight;
+      camera.updateProjectionMatrix();
+
+      // Define mouse position
+      var mousePos = { x: 0, y: 0 };
+
+      // Define rotation control variables
+      var isDragging = false;
+      var previousMousePosition = { x: 0, y: 0 };
+      var rotationSpeed = 0.25;
+
+      // Add event listeners for mousedown, mouseup, and mousemove events
+      document.addEventListener(
+        "mousedown",
+        function (e) {
+          isDragging = true;
+        },
+        false
+      );
+
+      document.addEventListener(
+        "mouseup",
+        function (e) {
+          isDragging = false;
+        },
+        false
+      );
+
+      document.addEventListener(
+        "mousemove",
+        function (e) {
+          mousePos.x = e.clientX / window.innerWidth;
+          mousePos.y = e.clientY / window.innerHeight;
+
+          var deltaMove = {
+            x: e.clientX - previousMousePosition.x,
+            y: e.clientY - previousMousePosition.y,
+          };
+
+          if (isDragging) {
+            var deltaRotationQuaternion = new THREE.Quaternion().setFromEuler(
+              new THREE.Euler(
+                toRadians(deltaMove.y * rotationSpeed),
+                toRadians(deltaMove.x * rotationSpeed),
+                0,
+                "XYZ"
+              )
+            );
+
+            globe.quaternion.multiplyQuaternions(
+              deltaRotationQuaternion,
+              globe.quaternion
+            );
+          }
+
+          previousMousePosition = {
+            x: e.clientX,
+            y: e.clientY,
+          };
+        },
+        false
+      );
+
+      function toRadians(angle) {
+        return angle * (Math.PI / 180);
+      }
+
+      var animate = function () {
+        requestAnimationFrame(animate);
+
+        if (!isDragging) {
+          globe.rotation.x = mousePos.y * Math.PI;
+          globe.rotation.y = mousePos.x * Math.PI * 2;
+        }
+
+        renderer.render(scene, camera);
+      };
+
+      animate();
+    </script>
+
+    <!-- Chart JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      // Chart.js
+      var ctx = document.getElementById("pricing-chart").getContext("2d");
+      var pricingChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Basic", "Standard", "Premium"],
+          datasets: [
+            {
+              label: "Price Range",
+              data: [30000, 40000, 50000],
+              backgroundColor: [
+                "rgba(54, 162, 235, 0.7)",
+                "rgba(75, 192, 192, 0.7)",
+                "rgba(255, 99, 132, 0.7)",
+              ],
+              borderColor: [
+                "rgba(54, 162, 235, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(255, 99, 132, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            y: {
+              beginAtZero: true,
+              ticks: {
+                stepSize: 10000,
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              labels: {
+                color: "white", // Set the legend text color to white
+              },
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
